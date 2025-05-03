@@ -27,7 +27,7 @@ const PORT = process.env.PORT || 5000;
 app.use(morgan('combined'))
 app.use(
   cors({
-    origin: "*",
+    origin: "https://ecommerce-dress.vercel.app",
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
