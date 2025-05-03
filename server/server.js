@@ -14,7 +14,7 @@ const shopSearchRouter = require("./routes/shop/search-routes");
 const shopReviewRouter = require("./routes/shop/review-routes");
 
 const commonFeatureRouter = require("./routes/common/feature-routes");
-
+const morgan = require('morgan')
 require("dotenv").config();
 
 mongoose
@@ -24,7 +24,7 @@ mongoose
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+app.use(morgan('combined'))
 app.use(
   cors({
     origin: "*",
